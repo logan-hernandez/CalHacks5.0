@@ -54,11 +54,11 @@ export default class TeachForm extends Component {
 					</FormGroup>
 					<FormGroup>
 						<Label for="classField">Class Number</Label>
-						<Input type="text" name="class" id="classField" placeholder="Choose Number" onChange={this.handleClassChange}/>						
+						<Input type="text" name="class" id="classField" placeholder="Choose Number" onChange={this.handleClassChange}/>
 					</FormGroup>
 					<FormGroup>
-						<Label for="ratePerHour">Hourly Rate</Label>
-						$<Input type="text" name="rate" id="ratePerHour" placeholder="10" onChange={this.handleRateChange}/>.00
+						<Label for="ratePerHour">Hourly Rate ($)</Label>
+						<Input type="text" name="rate" id="ratePerHour" placeholder="10" onChange={this.handleRateChange}/>
 					</FormGroup>
 				</Form>
 				<Button outline color="primary" onClick={this.handleClick}>Post Listing</Button>
