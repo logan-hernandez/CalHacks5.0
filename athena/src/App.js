@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import io from "socket.io-client";
-import { Button, Container, Row } from 'reactstrap';
+import { Button, Container, Row, Col } from 'reactstrap';
 import Result from './result'
 import NavBar from './NavBar'
+import logo from './Athena-logo.svg'
 const socket = io.connect("http://localhost:5000");
 
 class App extends Component {
@@ -34,14 +35,29 @@ class App extends Component {
         <NavBar />
         <Container>
         <div align="center">
-          <h1 textAlign="center" color="#6A98FF">Athena</h1>
+          {/*<h1 textAlign="center" color="#6A98FF">Athena</h1>*/}
+          <img src={logo} height="100"/>
+          <br />
+          <address> Tutoring by peers, for peers. </address>
+          <br />
         </div>
         <div align="center">
           <Row>
-            <Button outline color="primary" onClick={this.handleTeach}>Teach</Button>
-            <samp />
-
-            <Button outline color="primary" onClick={this.handleLearn}>Learn</Button>
+            <Col />
+            <Col />
+            <Col />
+            <Col />
+            <Col />
+            <Col />
+            <Col><Button outline color="primary" size="lg" onClick={this.handleTeach}>Teach</Button></Col>
+            <Col />
+            <Col><Button outline color="primary" size="lg" onClick={this.handleLearn}>Learn</Button></Col>
+            <Col />
+            <Col />
+            <Col />
+            <Col />
+            <Col />
+            <Col />
           </Row>
         </div>
           <Result status={this.state}/>
