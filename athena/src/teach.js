@@ -16,7 +16,7 @@ export default class TeachForm extends Component {
 
 	handleClick() {
 		socket.emit("teach", this.state);
-		console.log(this.state);
+		this.props.completed();
 	}
 
 	handleClassChange(event) {

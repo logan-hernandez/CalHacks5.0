@@ -15,7 +15,7 @@ export default class LearnForm extends Component {
 
 	handleClick() {
 		socket.emit("learn", this.state);
-		console.log(this.state);
+		this.props.completed();
 	}
 
 	handleClassChange(event) {
