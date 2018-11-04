@@ -3,7 +3,6 @@ import './App.css';
 import io from "socket.io-client";
 import { Button } from 'reactstrap';
 import Result from './result'
-
 const socket = io.connect("http://localhost:5000");
 
 class App extends Component {
