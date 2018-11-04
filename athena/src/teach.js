@@ -21,6 +21,7 @@ export default class TeachForm extends Component {
 
 	handleClassChange(event) {
 		this.setState({class: event.target.value});
+		console.log(this.state.class);
 	}
 
 	handleCourseChange(event) {
