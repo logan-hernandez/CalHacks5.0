@@ -4,7 +4,7 @@ import io from "socket.io-client";
 import { Button, Container, Row, Col } from 'reactstrap';
 import Result from './result'
 import NavBar from './NavBar'
-import logo from './Athena-logo.svg'
+import logo from './Athena-logo-2.svg'
 const socket = io.connect("http://localhost:5000");
 
 class App extends Component {
@@ -35,8 +35,9 @@ class App extends Component {
         <NavBar />
         <Container>
         <div align="center">
-          {/*<h1 textAlign="center" color="#6A98FF">Athena</h1>*/}
-          <img src={logo} height="100"/>
+          <br />
+          <h1 textAlign="center" style={{color: "#6a98FF", fontSize: "300%"}}>Athena</h1>
+          {/*}<img src={logo} height="100"/>*/}
           <br />
           <address> Tutoring by peers, for peers. </address>
           <br />
