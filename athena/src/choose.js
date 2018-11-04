@@ -1,39 +1,15 @@
 import React, { Component } from 'react';
+import io from "socket.io-client";
+const socket = io.connect("http://localhost:5000");
 
-export default class Waiting extends Component {
+export default class Choose extends Component {
+	componentWillMount() {
+    	socket.on("tutors", (res) => {this.setState(res)} );
+  	}
+
 	render() {
-		if (this.props.status.learn) {
-			if(this.state.complete) {
-				if(this.state.selected) {
-					return(
-						<Choose />
-					);
-				}
-				else {
-					return(
-						<Waiting />
-					);
-				}
-			}
-			else {
-				return(
-					<LearnForm />
-				);
-			}
-		}
-		else if (this.props.status.teach) {
-			if(this.state.complete) {
-				return(
-					<Waiting />
-				);
-			}
-			else {
-				return(
-					<TeachForm />
-				);
-			}
-		}
-		else
-			return(<div></div>);
+		return (
+			<div>Choose</div>
+		);
 	}
 }
