@@ -20,11 +20,11 @@ class App extends Component {
   }
 
   handleTeach() {
-    this.setState({ teach: true });
+    this.setState({ teach: true, learn: false});
   }
 
   handleLearn() {
-    this.setState({ learn: true }); 
+    this.setState({ teach: true, learn: true }); 
   }
 
   render() {
@@ -33,7 +33,7 @@ class App extends Component {
         <h1>Athena</h1>
         <Button outline color="primary" onClick={this.handleTeach}>Teach</Button>
         <Button outline color="primary" onClick={this.handleLearn}>Learn</Button>
-        <Result status={this.state} />
+        <Result status={this.state}/>
       </div>
     );
   }
